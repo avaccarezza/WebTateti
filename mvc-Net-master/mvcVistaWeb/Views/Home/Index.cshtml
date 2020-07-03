@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+    
+       
+    <center>
+     
+       
+
+        <form class="formulario" asp-controller="Home" asp-action="RegistrarUsuario" method="post">
+            <div class="text-center">
+                <h2>Ingrese usuario</h2>
+                <input class="mb-3" type="text" placeholder="Usuario" name="usuario" />
+                <h2>Ingrese contraseña</h2>
+                <input class="mb-3" type="text" placeholder="Contraseña" name="contrasena" />
+                <br />
+                <input id="btn" type="submit" value="Registrarse" />
+            </div>
+        </form>
+    </center>
+        
+   
+
+
+<div class="formulario">
+    <div class="text-center">
+
+        <h1 class="display-5">Sistema de busqueda de usuarios sin AJAX</h1>
+        <form asp-controller="Home" asp-action="BuscarUsuarioSinAjax" method="post">
+
+            <input type="text" placeholder="Usuario ID" name="usuarioIdSinAjax" />
+            <input type="submit" value="Buscar" />
+
+        </form>
+
+
+        @{
+
+            if (ViewData.ContainsKey("usuario"))
+            {
+
+                Usuario usuario = (Usuario)ViewData["usuario"];
+
+                <p><h3>Usuario encontrado sin AJAX</h3></p>
+                <p><b>ID: </b>@usuario.id</p>
+                <p><b>Email: </b>@usuario.usuario</p>
+                <p><b>Direccion: </b>@usuario.contrasena</p>
+                <p><b>Puntos: </b>@usuario.puntaje</p>
+                <p><b>Puntos: </b>@usuario.partidas_ganadas</p>
+                <p><b>Puntos: </b>@usuario.partidas_jugadas</p>
+
+            }
+
+        }
+
+    </div>
+
+    <div class="text-center">
+
+        <h1 class="display-5">Sistema de busqueda de usuarios con AJAX</h1>
+
+        <input type="text" placeholder="Usuario ID" id="usuarioIdConAjax" />
+        <button id="buscarUsuario">Buscar</button>
+
+        <div id="usuario"></div>
+
+    </div>
+</div>
+<br />
+

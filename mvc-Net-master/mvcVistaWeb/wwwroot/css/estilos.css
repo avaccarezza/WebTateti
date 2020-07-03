@@ -1,0 +1,43 @@
+﻿.formulario {
+    /*background-color: #F2E7D4;
+    width: 500px;
+    border: solid #F5AC59;
+    border-radius: 5px;*/
+position: relative;
+
+width : 740px;
+height : 498px;
+margin : 0 auto;
+
+
+}
+
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+#btn {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #257605;
+    border: none;
+    border-radius: 15px;
+}
+.fondo {
+    background: #FFF url(../img/background.jpg);
+}
